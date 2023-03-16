@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Repository
 {
-    public interface IRepository<TEntity> where TEntity : BasicEntity
+    public interface IRepository<TEntity> where TEntity : class
     {
         Task<IEnumerable<TEntity>> GetAllAsync(Expression<Func<TEntity, bool>> filter = null,
             Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderby = null,

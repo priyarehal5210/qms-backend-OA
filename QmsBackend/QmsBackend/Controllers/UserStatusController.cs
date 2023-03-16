@@ -39,7 +39,7 @@ namespace QmsBackend.Controllers
         {
             if(userSuccessDto != null)
             {
-               await _iUserSuccessService.UpdateAsync(userSuccessDto); return Ok("updated");
+               await _iUserSuccessService.UpdateAsync(userSuccessDto); return Ok();
             }
             return BadRequest();
         }
@@ -47,7 +47,7 @@ namespace QmsBackend.Controllers
         public async Task<IActionResult> delete(int id)
         {
            await _iUserSuccessService.RemoveAsync(id);
-            return Ok("deleted");
+            return Ok();
         }
     }
 }

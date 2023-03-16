@@ -47,7 +47,7 @@ namespace ServiceLayer.Services
             try
             {
                 var obj =await _assignTasksRepository.GetAllAsync(IncludeProperties: "register,tasks");
-                if(obj!=null)
+                if (obj != null)
                 {
                     return obj;
                 } 

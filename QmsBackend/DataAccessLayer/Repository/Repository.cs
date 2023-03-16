@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Repository
 {
-    public class Repository<TEntity> : IRepository<TEntity> where TEntity : BasicEntity
+    public class Repository<TEntity> : IRepository<TEntity> where TEntity :class
     {
         private readonly ApplicationDbContext _context;
         internal DbSet<TEntity> dbSet;
